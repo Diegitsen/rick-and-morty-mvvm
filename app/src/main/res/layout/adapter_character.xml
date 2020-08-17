@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="character"
+            type="com.diegitsen.rickandmorty.data.model.Character" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_ad_character_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{character.name}"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18dp"
+                tools:text="Rick Sanchez" />
+
+            <TextView
+                android:id="@+id/tv_ad_character_alive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{character.status}"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                tools:text="Alive" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</layout>
